@@ -1,0 +1,487 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body,td,th {
+	font-family: Open Sans, Verdana, sans-serif;
+	font-weight:400;
+	font-size: 14px;
+	color: #666;
+	background-color:#eeeeee;
+	text-align:center;
+}
+
+body {
+	margin:0 auto;
+	text-align:center;
+}
+
+#container {
+	font-family: Open Sans, Verdana, sans-serif;
+	font-weight:400;
+	font-size: 14px;
+	width:1000px;
+	display:block;
+	background-color:#FFF;
+	text-align:center;
+	margin:0 auto;
+	}
+	
+#headerbar {
+	background-image:url(../images/headerbar.png);
+	background-position:top center;
+	width:1000px;
+	height:5px;
+}
+
+#header {
+	width:1000px;
+	height:40px;
+	text-align:left;
+	background-color:#FFF;
+}
+
+#date {
+	float:left;
+	padding-top:5px;
+	padding-left:32px;
+	color:#CCC;
+	height:15px;
+	font-size:10px;
+}
+
+#contact_details {
+	float:right;
+	padding-top:5px;
+	color:#3B87B7;
+	font-weight:400italic;
+	padding-right:35px;
+	font-size:12px;
+	line-height:15px;
+	text-align:right;
+	}
+	
+#contact_details a:link, a:visited, a:hover, a:active {
+	text-decoration:none;
+	color: #00F;
+	padding:0px;
+	}
+
+#netfm {
+	float:left;
+	width:1000px;
+	padding-top:0px;
+	padding-bottom:15px;
+	text-align:left;
+	padding-left:35px;
+	font-family: Ubuntu, Verdana, sans-serif;
+	font-weight:500;
+	font-size: 24px;
+	color: #209645;
+	}
+	
+#subhead {
+	float:right;
+	color:#3B87B7;
+	font-weight:400italic;
+	padding-right:67px;
+	font-size:12px;
+	line-height:27px;
+	}
+
+#menu_bg {
+	height:250px;
+	background-image: url('../images/virtual_server_hosting-uk.png');
+	background-position:bottom;
+	background-repeat:no-repeat;
+	display:block;
+	background-color:#FFF;
+	text-align:center;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+#netfm_bg {
+	height:250px;
+	background-image: url('../images/netfm/netfm_bespoke_software_development.png');
+	background-position:bottom;
+	background-repeat:no-repeat;
+	display:block;
+	background-color:#FFF;
+	text-align:center;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+#menu {
+	background-image: url(../images/virtual_hosting_menu_bg.png);
+	background-position:top center;
+	background-repeat:no-repeat;
+	width:1000px;
+	height:41px;
+	text-align:center;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+a { font-family: Open Sans, Verdana, sans-serif;font-weight:400;color: #333; text-decoration: none; padding:0px; }
+a:hover { color: #333; text-decoration: underline; }
+
+#menu ul { margin: 0 0 0 50px; padding: 0; text-align: center; list-style:none;font-family: Open Sans, Verdana, sans-serif;font-weight:400;font-size: 12px; }
+#menu li { float: left; margin: 0; padding: 0; background: none; }
+#menu a:link {  display: block; line-height: 41px; padding-left: 32px; padding-right: 40px; padding-top:0px; padding-bottom:0px; color: #333; font-weight:bold; text-decoration: none;  }
+#menu a:visited {  color: #333;  }
+#menu a:hover { color: #4b85b5; }
+#menu a.active { color: #4b85b5;  }
+#menu a.active:hover { color: #4b85b5; }
+	
+#virtual_hosting_main {
+	width:960px;
+	text-align:left;
+	padding-left:20px;
+	padding-right:20px;
+	background-color:#FFF;
+	height:100%;
+	padding-top:15px;
+	margin-top:0px;
+	margin:0 auto;
+}
+
+#virtual_hosting_main p {
+	padding-top:0px;
+	margin-top:0px;
+	padding-left:20px;
+	padding-right:20px;
+	text-align: justify;
+}
+
+#virtual_hosting_main a:link, a:visited, a:hover, a:active {
+	text-decoration:none;
+	color: #00F;
+	padding:0px;
+	}
+
+#virtual_hosting_panels {
+	width:960px;
+	text-align:left;
+	background-color:#FFF;
+	height:100%;
+}
+
+#virtual_hosting_security {
+	width:320px;
+	float:left;
+	position:relative;
+	left:0px;
+	background-color:#FFF;
+}
+
+#virtual_hosting_security_header {
+	background-image: url(../images/virtual_hosting_security_2.jpg);
+	background-position:top center;
+	background-repeat: no-repeat;
+	height: 130px;
+}
+
+#cheap_virtual_hosting {
+	width:320px;
+	float:right;
+	position:relative;
+	right:0px;
+	background-color:#FFF;
+}
+
+#cheap_virtual_hosting_header {
+	background-image: url(../images/cheap_virtual_hosting_2.jpg);
+	background-position:top center;
+	background-repeat: no-repeat;
+	height: 130px;
+	
+}
+
+#virtual_hosting_benefits {
+	width:320px;
+	float:right;
+	position:relative;
+	left:0px;
+	background-color:#FFF;
+}
+
+#netfm_contact_form {
+	width:600px;
+	float:right;
+	position:relative;
+	left:0px;
+	background-color:#FFF;
+}
+
+
+
+#virtual_hosting_benefits_header {
+	background-image: url(../images/virtual_hosting_benefits_2.jpg);
+	background-position:top center;
+	background-repeat: no-repeat;
+	height: 130px;
+}
+
+#virtual_hosting_panels h2 {
+	color:#ffffff;
+	font-weight: normal;
+	font-size:18px;
+	text-shadow: 1px 1px #999;
+	padding-top:10px;
+	margin-bottom:0px;
+	padding-left:25px;
+}
+
+#virtual_hosting_panels ul {
+margin-top:10px;
+}
+	
+#virtual_hosting_panels li {
+	color:#ffffff;
+	font-weight:normal;
+	font-size:14px;
+	line-height:24px;
+	padding-left:5px;
+	margin-left:15px;
+	list-style-image: url(../images/corporate_hosting_benefits.png);
+}
+	
+
+#panels_text_bg {
+	margin:10px 10px 20px 10px;
+	padding: 0px;
+	background-color:#eeeeee;
+	height:270px;
+	border:1px solid #eeeeee;
+border-top-left-radius:15px;
+border-top-right-radius:15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius:15px;
+-webkit-border-top-left-radius:15px;
+-webkit-border-top-right-radius:15px;
+-webkit-border-bottom-right-radius:15px;
+-webkit-border-bottom-left-radius:15px;
+-moz-border-top-left-radius:15px;
+-moz-border-top-right-radius:15px;
+-moz-border-bottom-right-radius:15px;
+-moz-border-bottom-left-radius:15px;
+}
+
+#panels_text_bg h2 {
+	color:#ffffff;
+	font-weight:bold;
+	font-size:14px;
+	margin:0px;
+}
+
+#panels_text_bg p {
+	margin-top:7px;
+	margin-bottom:10px;
+	color:#666;
+	font-size:12px;
+}
+
+#footer {
+	margin:0 auto;
+	width:1000px;
+	padding-top:10px;
+	font-family: Open Sans, Verdana, sans-serif;
+	font-weight:400;
+	font-size: 11px;
+	background-color:#FFF;
+	}
+	
+#footer a:link, a:visited, a:hover, a:active {
+	text-decoration:none;
+	color: #00F;
+	padding:10px;
+	}
+	
+h1 {
+	font-family: Ubuntu, Verdana, sans-serif;
+	font-weight:400;
+	font-size: 16px;
+	line-height: 30px;
+	color: #fff;
+	margin-left:20px;
+	background-image:url(../images/car_park_management_systems/carparkmanagementsystems_hdr.jpg);
+	background-repeat:no-repeat;
+	background-position:center left;
+	display:block;
+	padding-left:10px;
+}
+
+#contact_netfm_left {width:450px;float:left;display: inline; background-image:url('../images/contact_netfm/call_netfm.png'); background-position:top left; background-repeat: no-repeat; padding-left:48px;}
+#contact_netfm_left span {color:#4b85b5;}
+
+#contact_netfm_right {width:450px;display: inline; }
+#contact_netfm_right span {color:#4b85b5;}
+
+.formtext {font-size:11px;margin-bottom:3px;padding-top:7px; color:#4b85b5;}
+#netfm_contact_form {font-size:12px; border-color:#4b85b5; border-width:thin; border-style:solid;padding-top:7px; }
+#netfm_services {font-size:11px;margin-bottom:7px;padding-top:7px; color:#4b85b5; float:right; width:250px; }
+
+.highlight {color:#4b85b5;}
+
+ul.car_park_management {
+	line-height:25px;
+}
+
+#car_park_management_systems_bg {
+	height:250px;
+	background-image: url('../images/car_park_management_systems/car_park_management_systems.jpg');
+	background-position:bottom;
+	background-repeat:no-repeat;
+	display:block;
+	background-color:#FFF;
+	text-align:center;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+#car_park_management_systems_panels {
+	width:960px;
+	text-align:left;
+	background-color:#FFF;
+	height:100%;
+}
+
+#car_park_management_systems_click2park {
+	width:320px;
+	float:left;
+	position:relative;
+	left:0px;
+	background-color:#FFF;
+}
+
+#car_park_management_systems_click2park_header {
+	background-image: url(../images/virtual_hosting_security_2.jpg);
+	background-position:top center;
+	background-repeat: no-repeat;
+	height: 130px;
+}
+
+#car_park_management_systems_cpms {
+	width:320px;
+	float:right;
+	position:relative;
+	right:0px;
+	background-color:#FFF;
+}
+
+#car_park_management_systems_cpms_header {
+	background-image: url(../images/cheap_virtual_hosting_2.jpg);
+	background-position:top center;
+	background-repeat: no-repeat;
+	height: 130px;
+	
+}
+
+#car_park_management_systems_bespoke {
+	width:320px;
+	float:right;
+	position:relative;
+	left:0px;
+	background-color:#FFF;
+}
+
+#car_park_management_systems_bespoke_header {
+	background-image: url(../images/virtual_hosting_benefits_2.jpg);
+	background-position:top center;
+	background-repeat: no-repeat;
+	height: 130px;
+}
+
+#car_park_management_systems_panels h2 {
+	color:#ffffff;
+	font-weight: normal;
+	font-size:18px;
+	text-shadow: 1px 1px #999;
+	padding-top:10px;
+	margin-bottom:0px;
+	padding-left:25px;
+}
+
+#car_park_management_systems_panels ul {
+margin-top:10px;
+}
+	
+#car_park_management_systems_panels li {
+	color:#ffffff;
+	font-weight:normal;
+	font-size:14px;
+	line-height:24px;
+	padding-left:5px;
+	margin-left:15px;
+	list-style-image: url(../images/corporate_hosting_benefits.png);
+}
+	
+
+#car_park_management_systems_panels_text_bg {
+	margin:10px 10px 20px 10px;
+	padding: 0px;
+	background-color:#eeeeee;
+	height:320px;
+	border:1px solid #eeeeee;
+border-top-left-radius:15px;
+border-top-right-radius:15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius:15px;
+-webkit-border-top-left-radius:15px;
+-webkit-border-top-right-radius:15px;
+-webkit-border-bottom-right-radius:15px;
+-webkit-border-bottom-left-radius:15px;
+-moz-border-top-left-radius:15px;
+-moz-border-top-right-radius:15px;
+-moz-border-bottom-right-radius:15px;
+-moz-border-bottom-left-radius:15px;
+}
+
+#car_park_management_systems_panels_text_bg h2 {
+	color:#ffffff;
+	font-weight:bold;
+	font-size:14px;
+	margin:0px;
+}
+
+#car_park_management_systems_panels_text_bg p {
+	margin-top:7px;
+	margin-bottom:10px;
+	color:#666;
+	font-size:12px;
+}
+
+#car_sharing_panels_text_bg {
+	margin:10px 10px 20px 10px;
+	padding: 0px;
+	background-color:#eeeeee;
+	height:400px;
+	border:1px solid #eeeeee;
+border-top-left-radius:15px;
+border-top-right-radius:15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius:15px;
+-webkit-border-top-left-radius:15px;
+-webkit-border-top-right-radius:15px;
+-webkit-border-bottom-right-radius:15px;
+-webkit-border-bottom-left-radius:15px;
+-moz-border-top-left-radius:15px;
+-moz-border-top-right-radius:15px;
+-moz-border-bottom-right-radius:15px;
+-moz-border-bottom-left-radius:15px;
+}
+
+#car_sharing_panels_text_bg h2 {
+	color:#ffffff;
+	font-weight:bold;
+	font-size:14px;
+	margin:0px;
+}
+
+#car_sharing_panels_text_bg p {
+	margin-top:7px;
+	margin-bottom:10px;
+	color:#666;
+	font-size:12px;
+}
