@@ -1,4 +1,7 @@
-body { padding-top: 70px; }
+body { 
+padding-top: 70px; 
+margin-bottom:80px;
+}
 
 .starter-template {
   padding: 40px 15px;
