@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -10,11 +12,7 @@
 
     <title>NetFM visitor management demo</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -25,13 +23,26 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
+    
+  <script type="text/javascript" src="../../../jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../moment/min/moment.min.js"></script>
+  <script type="text/javascript" src="../../../bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../../eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <link rel="stylesheet" href="../../../bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
   </head>
+
+
 
 
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -40,10 +51,11 @@
             <span class="icon-bar"></span>
           </button>
 
-                <a class="navbar-brand" href="#">
-                    <img src="favicon.ico" alt="">
-                </a>
-          <a class="navbar-brand" href="#">NetFM</a>
+          <a class="navbar-brand" href="#">
+             <img src="favicon.ico" alt="">
+          </a>
+          <a class="navbar-brand" href="#">NetFM
+	  </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -55,6 +67,7 @@
       </div>
     </nav>
 
+<!--
     <div class="container">
 
       <div class="starter-template">
@@ -62,15 +75,70 @@
         <p class="lead"> Text here.<br> And here.</p>
       </div>
 
-    </div><!-- /.container -->
+    </div>
+-->    
+
+    
+    
+    
+    
+<div class="container-fluid">
+    <div class="form-group">   
+        <div class="row">
+    	    <div class='col-lg-offset-1 col-lg-1 col-md-2 col-sm-2 col-xs-2'>
+                <label for="datetimepicker6" class="control-label">Start time:
+                </label>
+            </div>
+            <div class='col-lg-3 col-md-3 col-sm-4 col-xs-10'>
+                <div class='input-group date' id='datetimepicker6'>
+                    <input type='text' class="form-control" autocomplete="off"/>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="clearfix visible-xs-block"></div>
+            <div class='col-lg-offset-1 col-lg-1 col-md-offset-1 col-md-2 col-sm-2 col-xs-2'>
+                <label for="datetimepicker7" class="control-label">End time:
+                </label>
+            </div>
+            <div class='col-lg-3 col-md-3 col-sm-4 col-xs-10'>
+                <div class='input-group date' id='datetimepicker7'>
+                    <input type='text' class="form-control" autocomplete="off"/>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+	var d = new Date();
+	d.setHours(0,0,0,0);	
+	var f = new Date();	
+	f.setDate( d.getDate() + 1 );	
+	f.setHours(0,0,0,0);	
+
+        $('#datetimepicker6').datetimepicker({stepping: '10',defaultDate: d});
+        $('#datetimepicker7').datetimepicker({stepping: '10',defaultDate: f});
+        $("#datetimepicker6").on("dp.change",function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change",function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+</script>
+    
     
     <div class="bs-example">
     <div class="table-responsive"> 
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover ">
             <thead>
                 <tr>
                     <th class="col-sm-1" style="text-align: center;">Visitor ID</th>
-                    <th class="col-sm-5">Name</th>
+                    <th class="col-sm-2">Name</th>
+                    <th class="col-sm-3">Host name</th>
                     <th class="col-sm-1" style="text-align: center;">Scheduled arrival time</th>
                     <th class="col-sm-1" style="text-align: center;">Arrival time</th>
                     <th class="col-sm-1" style="text-align: center;">ANPR</th>
@@ -78,33 +146,46 @@
                     <th class="col-sm-2">Details</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="bg-overdue">
+	    <tbody style="overflow-y:scroll;">
+                <tr class="bg-overdue" id="data1" data-id="1" data-name="John Turner" data-host="Matt Jones" data-time="9:15" data-anpr="1" data-greeted="1">
                     	<td style="text-align: center; vertical-align: middle;">1</td>
                     	<td style="vertical-align: middle;">John Turner</td>
+                    	<td style="vertical-align: middle;">Matt Walker</td>
                     	<td style="text-align: center;vertical-align: middle;">9:15</td>
                     	<td></td>
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1" disabled="disabled"/></td>
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1"/></td>
-  	        	<td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal">Info</a></td>
+  	        	<td><button class="btn btn-primary InfoModal">Info</a></td>
                 </tr>
                 <tr class="bg-active">
                     	<td style="text-align: center; vertical-align: middle;">2</td>
-                    	<td style="vertical-align: middle;">Peter Smith</td>
+                    	<td style="vertical-align: middle;">Nick McKay</td>
+                    	<td style="vertical-align: middle;">Jason Coates</td>
                     	<td style="text-align: center; vertical-align: middle;">15:00</td>
                     	<td></td>
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1" disabled="disabled"/></td>
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1"/></td>
-  	        	<td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal">Info</a></td>
+  	        	<td><button class="btn btn-primary InfoModal">Info</a></td>
+                </tr>
+                <tr class="bg-active">
+                    	<td style="text-align: center; vertical-align: middle;">2</td>
+                    	<td style="vertical-align: middle;">Peter Smith</td>
+                    	<td style="vertical-align: middle;">Trevor Cowley</td>
+                    	<td style="text-align: center; vertical-align: middle;">15:00</td>
+                    	<td></td>
+                	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1" disabled="disabled"/></td>
+                	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1"/></td>
+  	        	<td><a class="btn btn-primary InfoModal">Info</a></td>
                 </tr>
                 <tr class="bg-active">
                     	<td style="text-align: center; vertical-align: middle;">3</td>
                     	<td style="vertical-align: middle;">Mark Jones</td>
+                    	<td style="vertical-align: middle;">Tim Roberts</td>
                     	<td style="text-align: center; vertical-align: middle;">19:00</td>
                     	<td></td>
                     	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1" disabled="disabled" checked="checked"/></td>
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1"/></td>
-  	        	<td><a class="btn btn-primary" data-toggle="modal" data-target="#myModal">Info</a></td>
+  	        	<td><a class="btn btn-primary InfoModal">Info</a></td>
                 </tr>
             </tbody>
         </table>
@@ -178,13 +259,13 @@ setInterval(GetClock,1000);
        <form class="form-horizontal">
           <div class="modal-header">
              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-             <h4 class="modal-title" id="myModalLabel">Visitor Name :</h4>
+             <h4 class="modal-title" id="myModalLabel">Visitor Name : <div id="InfoModal-visitor-name"></div></h4>
           </div>
           <div class="modal-body">      
              <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Visitor ID:</label>
                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                   <input type="text" class="form-control" id="InfoModal-visitor-n" placeholder="Email">
                 </div>
              </div>
              <div class="form-group">
@@ -216,31 +297,37 @@ setInterval(GetClock,1000);
              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
              <button type="button" class="btn btn-primary">Save changes</button>
           </div>
+	  
+	  
         </form>    
     </div>
   </div>
 </div>
 
-ABC
-     <div id="result"></div>
-   DEF  
-     
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-   <script>
-   function autoRefresh_div()
-   {
-      $("#result").load("load.html");// a function which will load data from other file after x seconds
-   }
-   setInterval('autoRefresh_div()', 5000); // refresh div after 5 secs
-   </script>
+<script type="text/javascript">
+$('.InfoModal').click(function(){
+	var row_number = $(this).closest("tr")[0].rowIndex;
+        $('#InfoModal-visitor-name').val($("#data" + row_number).attr("data-name"));	
+        $('#myModal').modal('show');
 
+    });
+</script>
+
+
+
+<!-- Bit of code to put another html page onto this website, with a refresh on the other webpage of 5 seconds. This
+is a javascript alternative to <META HTTP-EQUIV="refresh" CONTENT="15"> which refreshes the entire page!
+  <div id="result"></div>    
+
+  <script>
+     function autoRefresh_div()
+     {
+        $("#result").load("load.html");// a function which will load data from other file after x seconds
+     }
+     setInterval('autoRefresh_div()', 5000); // refresh div after 5 secs
+  </script>
+-->
      
   </body>
 </html>
