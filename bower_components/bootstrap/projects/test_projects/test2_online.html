@@ -1,74 +1,55 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="favicon.ico">
 
-    <title>NetFM visitor management demo</title>
+      <title>NetFM visitor management demo</title>
 
    
-  <script type="text/javascript" src="../../../jquery/dist/jquery.min.js"></script>
-      <script type="text/javascript" src="../../../moment/min/moment.min.js"></script>
-  <script type="text/javascript" src="../../../bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../../../eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-  <link rel="stylesheet" href="../../../bootstrap/dist/css/bootstrap.min.css" />
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../../eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
-  </head>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.0.0/js/bootstrap-datetimepicker.min.js"></script>
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" />
+      <!-- Custom styles for this template -->
+      <link href="starter-template.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.0.0/css/bootstrap-datetimepicker.min.css" />
+   </head>
 
-
-
-  <body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+   <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
 
-          <a class="navbar-brand" href="#">
-             <img src="favicon.ico" alt="">
-          </a>
-          <a class="navbar-brand" href="#">NetFM
-	  </a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+            <a class="navbar-brand" href="#">
+               <img src="favicon.ico" alt="">
+            </a>
+            <a class="navbar-brand" href="#">NetFM
+	    </a>
+         </div>
+         <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+               <li class="active"><a href="#">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </div><!--/.nav-collapse -->
       </div>
-    </nav>
-
-<!--
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Demo head3</h1>
-        <p class="lead"> Text here.<br> And here.</p>
-      </div>
-
-    </div>
--->    
-
-    
-    
-    
-    
+      </nav>
+          
 <div class="container-fluid">
     <div class="form-group">   
         <div class="row">
@@ -106,19 +87,14 @@
 	f.setDate( d.getDate() + 1 );	
 	f.setHours(0,0,0,0);	
 
-        $('#datetimepicker6').datetimepicker({stepping: '10',defaultDate: d,maxDate: f});
-        $('#datetimepicker7').datetimepicker({stepping: '10',defaultDate: f,minDate: d});
+        $('#datetimepicker6').datetimepicker({stepping: '10',defaultDate: d});
+        $('#datetimepicker7').datetimepicker({stepping: '10',defaultDate: f});
         $("#datetimepicker6").on("dp.change",function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);	    
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
         });
         $("#datetimepicker7").on("dp.change",function (e) {
             $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-	    	   	    
-	    var d = new Date($('#datetimepicker7').data("DateTimePicker").date());
-            update_datee(d);
         });
-        update_datee(d);
-
     });
 </script>
     
@@ -139,17 +115,17 @@
                 </tr>
             </thead>
 	    <tbody style="overflow-y:scroll;">
-                <tr class="bg-overdue" id="data1" data-id="1" data-name="John Turner" data-host="Matt Jones" data-time="9:15" data-anpr="0" data-greeted="1">
+                <tr class="bg-overdue" id="data1" data-id="1" data-name="John Turner" data-host="Matt Jones" data-time="9:15" data-anpr="1" data-greeted="1">
                     	<td style="text-align: center; vertical-align: middle;">1</td>
                     	<td style="vertical-align: middle;">John Turner</td>
                     	<td style="vertical-align: middle;">Matt Walker</td>
                     	<td style="text-align: center;vertical-align: middle;">9:15</td>
                     	<td></td>
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1" disabled="disabled"/></td>
-                	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1" checked="checked"/></td>
+                	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1"/></td>
   	        	<td><button class="btn btn-primary InfoModal">Info</a></td>
                 </tr>
-                <tr class="bg-active" id="data2" data-id="2" data-name="Nick McKay" data-host="Jason Coates" data-time="15:00" data-anpr="0" data-greeted="0">
+                <tr class="bg-active">
                     	<td style="text-align: center; vertical-align: middle;">2</td>
                     	<td style="vertical-align: middle;">Nick McKay</td>
                     	<td style="vertical-align: middle;">Jason Coates</td>
@@ -159,7 +135,7 @@
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1"/></td>
   	        	<td><button class="btn btn-primary InfoModal">Info</a></td>
                 </tr>
-                <tr class="bg-active" id="data3" data-id="3" data-name="Peter Smith" data-host="Trevor Cowley" data-time="15:00" data-anpr="0" data-greeted="0">
+                <tr class="bg-active">
                     	<td style="text-align: center; vertical-align: middle;">2</td>
                     	<td style="vertical-align: middle;">Peter Smith</td>
                     	<td style="vertical-align: middle;">Trevor Cowley</td>
@@ -169,7 +145,7 @@
                 	<td style="text-align: center; vertical-align: middle;"><input type="checkbox" id="blahA" value="1"/></td>
   	        	<td><a class="btn btn-primary InfoModal">Info</a></td>
                 </tr>
-                <tr class="bg-active" id="data4" data-id="4" data-name="Mark Jones" data-host="Tim Roberts" data-time="19:00" data-anpr="1" data-greeted="0">
+                <tr class="bg-active">
                     	<td style="text-align: center; vertical-align: middle;">3</td>
                     	<td style="vertical-align: middle;">Mark Jones</td>
                     	<td style="vertical-align: middle;">Tim Roberts</td>
@@ -250,47 +226,38 @@ setInterval(GetClock,1000);
     <div class="modal-content">
        <form class="form-horizontal">
           <div class="modal-header">
-             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	        <span aria-hidden="true">&times;</span>
-	     </button>
-             <h4 class="modal-title">Visitor Name :</h4>
-             <h4 class="modal-title" id="myModalHeader" align="right"></h4>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-title" id="myModalLabel">Visitor Name : <div id="InfoModal-visitor-name"></div></h4>
           </div>
           <div class="modal-body">      
              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Visitor Host:</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Visitor ID:</label>
                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="InfoModalVisitorHost" placeholder="Host">
+                   <input type="text" class="form-control" id="InfoModal-visitor-n" placeholder="Email">
                 </div>
              </div>
              <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Expected Arrival Time:</label>
                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="InfoModalVisitorETA" placeholder="--:--">
+                   <input type="text" class="form-control" id="inputEmail3" placeholder="--:--">
                 </div>
              </div>
              <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Arrival Time:</label>
                 <div class="col-sm-10">
-                   <input type="text" class="form-control" id="InfoModalVisitorArrivalTime" placeholder="--:--">
+                   <input type="text" class="form-control" id="inputEmail3" placeholder="--:--">
                 </div>
              </div>
              <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">ANPR Status:</label>
                 <div class="col-sm-10">
-                   <input type="checkbox" class="form-control" id="InfoModalVisitorANPRStatus" placeholder="Email">
+                   <input type="checkbox" class="form-control" id="inputEmail3" placeholder="Email">
                 </div>
              </div>
              <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Greeted Status:</label>
                 <div class="col-sm-10">
-                   <input type="checkbox" class="form-control pull-right" id="InfoModalVisitorGreetedStatus" placeholder="Email">
-                </div>
-             </div>
-             <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Photo:</label>
-                <div class="col-sm-10">
-		   <img class="img-rounded img-thumbnail" src="mickey.jpg" alt="Mountain View" style="width:88px;height:113px">
+                   <input type="checkbox" class="form-control pull-right" id="inputEmail3" placeholder="Email">
                 </div>
              </div>
           </div>
@@ -305,56 +272,15 @@ setInterval(GetClock,1000);
   </div>
 </div>
 
-                <tr class="bg-overdue" id="data1" data-id="1" data-name="John Turner" data-host="Matt Jones" data-time="9:15" data-anpr="1" data-greeted="1">
 
 <script type="text/javascript">
 $('.InfoModal').click(function(){
-	var row_number = $(this).closest("tr")[0].rowIndex; 
-        $('#myModalHeader').text($("#data" + row_number).attr("data-name"));
-        $('#InfoModalVisitorHost').val($("#data" + row_number).attr("data-host"));	
-        $('#InfoModalVisitorETA').val($("#data" + row_number).attr("data-time"));	
-
-        if($("#data" + row_number).attr("data-anpr") == 1) {
-	   $('#InfoModalVisitorANPRStatus').prop("checked", true);
-	}
-	else {
-	   $('#InfoModalVisitorANPRStatus').prop("checked", false);
-	}
-	
-        if($("#data" + row_number).attr("data-greeted") == 1) {
-	   $('#InfoModalVisitorGreetedStatus').prop("checked", true);
-	}
-	else {
-	   $('#InfoModalVisitorGreetedStatus').prop("checked", false);
-	}
-
+	var row_number = $(this).closest("tr")[0].rowIndex;
+        $('#InfoModal-visitor-name').val($("#data" + row_number).attr("data-name"));	
         $('#myModal').modal('show');
 
     });
 </script>
-
-
-<h1 id="dateme"></h1>
-
-<script>
-        function update_datee(d){
-var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear(),nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
-
-     if(nhour==0){ap=" AM";nhour=12;}
-else if(nhour<12){ap=" AM";}
-else if(nhour==12){ap=" PM";}
-else if(nhour>12){ap=" PM";nhour-=12;}
-
-if(nyear<1000) nyear+=1900;
-if(nmin<=9) nmin="0"+nmin;
-if(nsec<=9) nsec="0"+nsec;
-
-        $('#dateme').text(""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"");
-};
-</script>
-
-
-
 
 
 
